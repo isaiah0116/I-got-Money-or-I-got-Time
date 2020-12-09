@@ -1,14 +1,15 @@
 #pragma once
 
-#include "Rand.h";
-#include <set>
-#include <iostream>
-#include <iomanip>
+#include "rand.h";
+#include<set>
+#include<iostream>
+#include<iomanip>
 #include<map>
 #include<vector>
 #include<utility>
 #include<queue>
-#include <string>
+#include<string>
+#include<unordered_map>
 
 using std::cout;
 using std::endl;
@@ -21,15 +22,16 @@ using std::set;
 using std::priority_queue;
 using std::greater;
 using std::make_pair;
+using std::unordered_map;
 
 class GraphAL {
 private:
-    map<string, int> prices;
+    unordered_map<string, int> prices;
 
 public:
 
-    map<string, vector<pair<string, int>>> graph; //Adjacency List
-    map<string, int> dist;
+    unordered_map<string, vector<pair<string, int>>> graph; //Adjacency List
+    unordered_map<string, int> dist;
 
     void insertEdge(string from, string to, int wt);
     bool isEdge(string from, string to);
