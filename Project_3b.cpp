@@ -15,7 +15,7 @@ using std::function;
 AVLTree toPriceBST(GraphAL& graph, string source); //Creates a Balanced BST based on the graph passed in. Tree is based on the prices of the restaurants
 AVLTree toDistBST(GraphAL& graph, string source); //Creates a Balanced BST based on the graph passed in. Tree is based on the distances of the restaurants from the source location
 
-GraphAL makeGraph(int& verts, int& edges, vector<string>& names); //Creates and fills the graph object
+GraphAL makeGraph(int& verts, long& edges, vector<string>& names); //Creates and fills the graph object
 
 void printVectorDist(Node* node);
 void printVectorPrice(Node* node);
@@ -23,7 +23,7 @@ void printVectorPrice(Node* node);
 
 int main()
 {
-    int edges;
+    long edges;
     int verts;
 
     bool badInput = true;
@@ -391,7 +391,7 @@ AVLTree toDistBST(GraphAL& graph, string source) {
     return distTree;
 }
 
-GraphAL makeGraph(int& verts, int& edges, vector<string>& names) {
+GraphAL makeGraph(int& verts, long& edges, vector<string>& names) {
     GraphAL graph;
 
     for (int i = 0; i < verts; i++) {
