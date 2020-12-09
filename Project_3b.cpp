@@ -47,14 +47,14 @@ int main()
     while (badInput) {
         cin >> edges;
 
-        long maxEdges = verts ^ 2;
+        long maxEdges = verts * verts;
         if (edges <= 0) {
             cout << "Please enter a positive non zero value" << endl;
         }
         else if (edges < verts) {
             cout << "Please enter a value equal to or larger than the amount of vertices" << endl;
         }
-        else if (edges < maxEdges) {
+        else if (edges > maxEdges) {
             cout << "Max amount of edges is " << maxEdges << ". Please try again" << endl;
         }
         else {
