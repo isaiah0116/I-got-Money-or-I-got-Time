@@ -25,7 +25,7 @@ std::string Random::String(int n) {
 
     return res;
 
-    //    return pool[rand() % poolSize];
+    //    return alphabet[rand() % MAX];
 }
 
 float Random::Float(float min, float max) {
