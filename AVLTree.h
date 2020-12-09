@@ -37,7 +37,7 @@ public:
 
     void printInorder(Node* root);
 
-    void sortNodes(Node* root);
+    void sortNodes(Node* root); //Sorts the vector within each node in the tree
 
     void kthSmallest(Node* root, Node* destination, int& temp2, bool& found);
 
